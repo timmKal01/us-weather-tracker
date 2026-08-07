@@ -1,0 +1,12 @@
+{
+    "actorSpecification": 1,
+    "name": "us-weather-tracker",
+    "title": "US Weather Forecast & Alerts Tracker (NWS)",
+    "description": "Get forecast, current conditions, and active weather alerts for any US location from the official National Weather Service API. No key, no proxy.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile"
+}

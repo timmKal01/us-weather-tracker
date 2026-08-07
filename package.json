@@ -1,0 +1,15 @@
+{
+    "name": "us-weather-tracker",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Get forecast, current conditions, and active alerts for US locations from the official National Weather Service API.",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.2.6"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}
