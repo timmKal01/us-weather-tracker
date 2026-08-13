@@ -67,3 +67,9 @@ Global free weather APIs (e.g. Open-Meteo) restrict their free tier to
 non-commercial use — using one to power a paid actor would violate those
 terms. NWS is US-government public data with no such restriction, at the
 cost of US-only coverage.
+
+## Related products
+
+- [Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing) — adds GPS/radio propagation conditions on top of the same NWS forecast data
+- [Space Weather Alert](https://github.com/timmKal01/space-weather-alert) — solar/geomagnetic conditions, for HF radio and aurora-visibility use cases NWS doesn't cover
+- [Disaster Declaration Tracker](https://github.com/timmKal01/disaster-declaration-tracker) — official FEMA disaster declarations rather than day-to-day forecasts
