@@ -10,6 +10,9 @@
             "description": "List of { \"label\": \"optional name\", \"latitude\": 30.2672, \"longitude\": -97.7431 }. US locations only (National Weather Service coverage).",
             "prefill": [
                 { "label": "Austin, TX", "latitude": 30.2672, "longitude": -97.7431 }
+            ],
+            "default": [
+                { "label": "Austin, TX", "latitude": 30.2672, "longitude": -97.7431 }
             ]
         },
         "forecastPeriods": {
