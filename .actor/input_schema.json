@@ -3,15 +3,33 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
+        "latitude": {
+            "title": "Latitude (for a single location)",
+            "type": "number",
+            "editor": "number",
+            "description": "Leave the Locations (multiple) field below empty to use this single-location shortcut instead. US locations only (National Weather Service coverage).",
+            "prefill": 30.2672
+        },
+        "longitude": {
+            "title": "Longitude (for a single location)",
+            "type": "number",
+            "editor": "number",
+            "description": "Only used together with Latitude above.",
+            "prefill": -97.7431
+        },
+        "label": {
+            "title": "Label (optional)",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Optional display name for the single location above, e.g. \"Austin, TX\".",
+            "prefill": "Austin, TX"
+        },
         "locations": {
-            "title": "Locations",
+            "title": "Locations (multiple)",
             "type": "array",
             "editor": "json",
-            "description": "List of { \"label\": \"optional name\", \"latitude\": 30.2672, \"longitude\": -97.7431 }. US locations only (National Weather Service coverage).",
+            "description": "For checking several locations in one run instead of one at a time. List of { \"label\": \"optional name\", \"latitude\": 30.2672, \"longitude\": -97.7431 }. US locations only. Ignored if Latitude above is filled in.",
             "prefill": [
-                { "label": "Austin, TX", "latitude": 30.2672, "longitude": -97.7431 }
-            ],
-            "default": [
                 { "label": "Austin, TX", "latitude": 30.2672, "longitude": -97.7431 }
             ]
         },
@@ -24,6 +42,5 @@
             "minimum": 1,
             "maximum": 14
         }
-    },
-    "required": ["locations"]
+    }
 }
