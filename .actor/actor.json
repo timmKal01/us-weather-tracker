@@ -1,12 +1,13 @@
 {
     "actorSpecification": 1,
     "name": "us-weather-tracker",
-    "title": "US Weather Forecast & Alerts Tracker (NWS)",
-    "description": "Get forecast, current conditions, and active weather alerts for any US location from the official National Weather Service API. No key, no proxy.",
+    "title": "Severe Weather Go/No-Go Alert Checker — Events, Sites & Deliveries (NWS)",
+    "description": "Check official NWS forecasts and active severe weather alerts for any US location before an outdoor event, delivery run, or job site call. Built for event planners, logistics dispatch, and site managers who need a fast go/no-go signal. No key, no proxy.",
     "version": "0.1",
     "meta": {
         "templateId": "custom-no-proxy"
     },
     "input": "./input_schema.json",
+    "output": "./output_schema.json",
     "dockerfile": "../Dockerfile"
 }
