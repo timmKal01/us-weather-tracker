@@ -1,6 +1,6 @@
 {
     "actorOutputSchemaVersion": 1,
-    "title": "Output schema of Severe Weather Go/No-Go Alert Checker — Events, Sites & Deliveries (NWS)",
+    "title": "Output schema of Severe Weather Go/No-Go Alert Checker: Events, Sites & Deliveries (NWS)",
     "description": "Results are pushed to the default dataset, one record per item.",
     "properties": {
         "results": {

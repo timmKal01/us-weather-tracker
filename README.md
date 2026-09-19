@@ -1,8 +1,23 @@
-# US Weather Forecast & Alerts Tracker (NWS)
+# Severe Weather Go/No-Go Alert Checker: Events, Sites & Deliveries (NWS)
 
 Give it a list of US coordinates. It returns the forecast, active weather
-alerts, and location info from the official National Weather Service API —
+alerts, and location info from the official National Weather Service API :
 the same data source behind weather.gov, as clean JSON.
+
+## Who this is for
+
+A fast go/no-go weather check for anyone making an operational call ahead of
+time, not a general-purpose weather app:
+
+- **Event planners**: weddings, festivals, sports, outdoor venues deciding whether to move indoors or reschedule.
+- **Logistics/delivery dispatch**: flagging routes or stops with active severe weather before drivers head out.
+- **Site & construction managers**: checking forecast and alerts before a job-site call.
+
+If you also need GPS/HF-radio propagation conditions on top of this (e.g. for
+field teams using radios or GPS-dependent equipment), see
+[Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing) below: same forecast data, plus space-weather
+conditions, at a higher per-location price. This actor is the lighter,
+cheaper option when you just need the weather/alerts signal.
 
 ## Input
 
@@ -20,7 +35,7 @@ the same data source behind weather.gov, as clean JSON.
 }
 ```
 
-US locations only — that's the National Weather Service's coverage area.
+US locations only: that's the National Weather Service's coverage area.
 
 ## Output
 
@@ -53,7 +68,7 @@ One record per location:
 
 ## How it works
 
-Direct calls to `api.weather.gov` — official NOAA/National Weather Service
+Direct calls to `api.weather.gov`: official NOAA/National Weather Service
 API, US federal government data (public domain, no non-commercial
 restriction, no API key). No proxy, no scraping.
 
@@ -64,12 +79,12 @@ map service before running.
 ## Why NWS instead of a global weather API
 
 Global free weather APIs (e.g. Open-Meteo) restrict their free tier to
-non-commercial use — using one to power a paid actor would violate those
+non-commercial use: using one to power a paid actor would violate those
 terms. NWS is US-government public data with no such restriction, at the
 cost of US-only coverage.
 
 ## Related products
 
-- [Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing) — adds GPS/radio propagation conditions on top of the same NWS forecast data
-- [Space Weather Alert](https://github.com/timmKal01/space-weather-alert) — solar/geomagnetic conditions, for HF radio and aurora-visibility use cases NWS doesn't cover
-- [Disaster Declaration Tracker](https://github.com/timmKal01/disaster-declaration-tracker) — official FEMA disaster declarations rather than day-to-day forecasts
+- [Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing): adds GPS/radio propagation conditions on top of the same NWS forecast data
+- [Space Weather Alert](https://github.com/timmKal01/space-weather-alert): solar/geomagnetic conditions, for HF radio and aurora-visibility use cases NWS doesn't cover
+- [Disaster Declaration Tracker](https://github.com/timmKal01/disaster-declaration-tracker): official FEMA disaster declarations rather than day-to-day forecasts

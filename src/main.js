@@ -4,7 +4,14 @@ import { getLocationWeather } from './nws.js';
 await Actor.init();
 
 const input = (await Actor.getInput()) ?? {};
-const { locations = [], forecastPeriods = 4 } = input;
+const { latitude: singleLat, longitude: singleLng, label: singleLabel, locations: locationsInput, forecastPeriods = 4 } = input;
+
+// The single-location fields (latitude/longitude/label) exist so a Store visitor never has to
+// touch the raw JSON "locations" editor just to check one place. They take priority when filled
+// in; "locations" is for the bulk/multi-location case.
+const locations = (typeof singleLat === 'number' && typeof singleLng === 'number')
+    ? [{ label: singleLabel ?? null, latitude: singleLat, longitude: singleLng }]
+    : (locationsInput?.length ? locationsInput : []);
 
 if (locations.length === 0) {
     throw new Error('No locations provided.');

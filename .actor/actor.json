@@ -1,7 +1,7 @@
 {
     "actorSpecification": 1,
     "name": "us-weather-tracker",
-    "title": "Severe Weather Go/No-Go Alert Checker — Events, Sites & Deliveries (NWS)",
+    "title": "Severe Weather Go/No-Go Alert Checker: Events, Sites & Deliveries (NWS)",
     "description": "Check official NWS forecasts and active severe weather alerts for any US location before an outdoor event, delivery run, or job site call. Built for event planners, logistics dispatch, and site managers who need a fast go/no-go signal. No key, no proxy.",
     "version": "0.1",
     "meta": {
