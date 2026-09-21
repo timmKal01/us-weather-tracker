@@ -83,6 +83,13 @@ non-commercial use: using one to power a paid actor would violate those
 terms. NWS is US-government public data with no such restriction, at the
 cost of US-only coverage.
 
+## Pricing note
+
+Billed per **location checked**, not per forecast period or alert
+returned, so a request for several locations scales predictably with how
+many places you actually asked about, whether or not each one currently
+has active alerts.
+
 ## Related products
 
 - [Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing): adds GPS/radio propagation conditions on top of the same NWS forecast data
