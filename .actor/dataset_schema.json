@@ -1,0 +1,53 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "label",
+                    "city",
+                    "state",
+                    "forecastPeriods",
+                    "activeAlerts",
+                    "timeZone",
+                    "checkedAt"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "label": {
+                        "label": "Label",
+                        "format": "text"
+                    },
+                    "city": {
+                        "label": "City",
+                        "format": "text"
+                    },
+                    "state": {
+                        "label": "State",
+                        "format": "text"
+                    },
+                    "forecastPeriods": {
+                        "label": "Forecast periods",
+                        "format": "array"
+                    },
+                    "activeAlerts": {
+                        "label": "Active alerts",
+                        "format": "array"
+                    },
+                    "timeZone": {
+                        "label": "Time zone",
+                        "format": "text"
+                    },
+                    "checkedAt": {
+                        "label": "Checked at",
+                        "format": "date"
+                    }
+                }
+            }
+        }
+    }
+}
