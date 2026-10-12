@@ -7,12 +7,14 @@
             "transformation": {
                 "fields": [
                     "label",
+                    "status",
                     "city",
                     "state",
                     "forecastPeriods",
                     "activeAlerts",
                     "timeZone",
-                    "checkedAt"
+                    "checkedAt",
+                    "error"
                 ]
             },
             "display": {
@@ -20,6 +22,10 @@
                 "properties": {
                     "label": {
                         "label": "Label",
+                        "format": "text"
+                    },
+                    "status": {
+                        "label": "Status",
                         "format": "text"
                     },
                     "city": {
@@ -45,6 +51,10 @@
                     "checkedAt": {
                         "label": "Checked at",
                         "format": "date"
+                    },
+                    "error": {
+                        "label": "Error (not charged)",
+                        "format": "text"
                     }
                 }
             }

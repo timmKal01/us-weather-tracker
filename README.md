@@ -66,6 +66,12 @@ One record per location:
 }
 ```
 
+**Locations that can't be checked** still get a row, with `"status": "error"`
+and an `error` saying why, and they aren't charged. That covers points outside
+the United States and its territories (the National Weather Service only
+covers the US) and coordinates that aren't numbers. Coordinates written as
+text, like `"30.2672"`, work. Every other row has `"status": "ok"`.
+
 ## How it works
 
 Direct calls to `api.weather.gov`: official NOAA/National Weather Service
@@ -88,7 +94,7 @@ cost of US-only coverage.
 Billed per **location checked**, not per forecast period or alert
 returned, so a request for several locations scales predictably with how
 many places you actually asked about, whether or not each one currently
-has active alerts.
+has active alerts. Locations that come back with an error aren't charged.
 
 ## Related products
 
