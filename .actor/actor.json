@@ -2,7 +2,7 @@
     "actorSpecification": 1,
     "name": "us-weather-tracker",
     "title": "US Weather Forecast & Alerts API (NWS)",
-    "description": "Check official NWS forecasts and active severe weather alerts for any US location before an outdoor event, delivery run, or job site call. Built for event planners, logistics dispatch, and site managers who need a fast go/no-go signal. No key, no proxy.",
+    "description": "A go/no-go weather check for U.S. locations: official National Weather Service forecast and active severe weather alerts for each site. For event planners, delivery and logistics dispatch, and construction and site managers deciding whether to go ahead.",
     "version": "0.1",
     "meta": {
         "templateId": "custom-no-proxy"

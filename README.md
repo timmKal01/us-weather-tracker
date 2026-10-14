@@ -1,23 +1,29 @@
-# Severe Weather Go/No-Go Alert Checker: Events, Sites & Deliveries (NWS)
+# US Weather Forecast & Alerts API (NWS)
 
-Give it a list of US coordinates. It returns the forecast, active weather
-alerts, and location info from the official National Weather Service API :
-the same data source behind weather.gov, as clean JSON.
+A go/no-go weather check for event planners, delivery and logistics
+dispatch, and construction and site managers. Give it U.S. locations and
+get the official National Weather Service forecast and any active severe
+weather alerts for each one, so you can decide whether to go ahead, move
+indoors, reroute or reschedule.
+
+## What you get
+
+One row per location:
+
+- City, state and time zone
+- The forecast for the coming periods: temperature, wind, chance of rain and a short summary
+- Every active weather alert for that spot (storms, floods, heat, winter weather and more)
 
 ## Who this is for
 
-A fast go/no-go weather check for anyone making an operational call ahead of
-time, not a general-purpose weather app:
+- **Event planners**: weddings, festivals, sports and outdoor venues deciding whether to move indoors or reschedule.
+- **Logistics and delivery dispatch**: flagging routes or stops with active severe weather before drivers head out.
+- **Site and construction managers**: checking the forecast and alerts before a job-site call.
 
-- **Event planners**: weddings, festivals, sports, outdoor venues deciding whether to move indoors or reschedule.
-- **Logistics/delivery dispatch**: flagging routes or stops with active severe weather before drivers head out.
-- **Site & construction managers**: checking forecast and alerts before a job-site call.
-
-If you also need GPS/HF-radio propagation conditions on top of this (e.g. for
-field teams using radios or GPS-dependent equipment), see
-[Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing) below: same forecast data, plus space-weather
+If your field teams also rely on GPS or HF radio, see
+[Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing) below: the same forecast data plus space-weather
 conditions, at a higher per-location price. This actor is the lighter,
-cheaper option when you just need the weather/alerts signal.
+cheaper option when you just need the weather and alerts.
 
 ## Input
 
