@@ -21,7 +21,7 @@ One row per location:
 - **Site and construction managers**: checking the forecast and alerts before a job-site call.
 
 If your field teams also rely on GPS or HF radio, see
-[Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing) below: the same forecast data plus space-weather
+[Field Operations Risk Briefing](https://apify.com/m_ctim/field-operations-risk-briefing) below: the same forecast data plus space-weather
 conditions, at a higher per-location price. This actor is the lighter,
 cheaper option when you just need the weather and alerts.
 
@@ -104,6 +104,6 @@ has active alerts. Locations that come back with an error aren't charged.
 
 ## Related products
 
-- [Field Operations Risk Briefing](https://github.com/timmKal01/field-operations-risk-briefing): adds GPS/radio propagation conditions on top of the same NWS forecast data
-- [Space Weather Alert](https://github.com/timmKal01/space-weather-alert): solar/geomagnetic conditions, for HF radio and aurora-visibility use cases NWS doesn't cover
-- [Disaster Declaration Tracker](https://github.com/timmKal01/disaster-declaration-tracker): official FEMA disaster declarations rather than day-to-day forecasts
+- [Field Ops Risk Briefing](https://apify.com/m_ctim/field-operations-risk-briefing): adds GPS/radio propagation conditions on top of the same NWS forecast data
+- [Space Weather Alerts](https://apify.com/m_ctim/space-weather-alert): solar/geomagnetic conditions, for HF radio and aurora-visibility use cases NWS doesn't cover
+- [FEMA Disaster Declaration Tracker by State](https://apify.com/m_ctim/disaster-declaration-tracker): official FEMA disaster declarations rather than day-to-day forecasts
