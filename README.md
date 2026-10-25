@@ -106,4 +106,3 @@ has active alerts. Locations that come back with an error aren't charged.
 
 - [Field Ops Risk Briefing](https://apify.com/m_ctim/field-operations-risk-briefing): adds GPS/radio propagation conditions on top of the same NWS forecast data
 - [Space Weather Alerts](https://apify.com/m_ctim/space-weather-alert): solar/geomagnetic conditions, for HF radio and aurora-visibility use cases NWS doesn't cover
-- [FEMA Disaster Declaration Tracker by State](https://apify.com/m_ctim/disaster-declaration-tracker): official FEMA disaster declarations rather than day-to-day forecasts
