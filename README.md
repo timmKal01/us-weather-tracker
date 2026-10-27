@@ -49,6 +49,7 @@ One record per location:
 
 ```json
 {
+  "rowType": "weather",
   "label": "Austin, TX",
   "latitude": 30.2672,
   "longitude": -97.7431,
@@ -71,6 +72,8 @@ One record per location:
   "checkedAt": "2026-08-07T00:00:00.000Z"
 }
 ```
+
+`rowType` is `"weather"`, or `"error"` for a location that couldn't be checked.
 
 **Locations that can't be checked** still get a row, with `"status": "error"`
 and an `error` saying why, and they aren't charged. That covers points outside

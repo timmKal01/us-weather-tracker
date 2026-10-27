@@ -40,7 +40,7 @@ for (const location of locations) {
     const latitude = toCoordinate(location?.latitude, 90);
     const longitude = toCoordinate(location?.longitude, 180);
     const checkedAt = new Date().toISOString();
-    const errorRow = (error) => Actor.pushData({ label, latitude: location?.latitude ?? null, longitude: location?.longitude ?? null, status: 'error', error, checkedAt });
+    const errorRow = (error) => Actor.pushData({ rowType: 'error', label, latitude: location?.latitude ?? null, longitude: location?.longitude ?? null, status: 'error', error, checkedAt });
 
     if (latitude === null || longitude === null) {
         await errorRow('Latitude and longitude must both be numbers, e.g. 30.2672 and -97.7431. Not charged.');
@@ -63,6 +63,7 @@ for (const location of locations) {
     }
 
     await Actor.pushData({
+        rowType: 'weather',
         label,
         latitude,
         longitude,
