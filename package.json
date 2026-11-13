@@ -2,7 +2,7 @@
     "name": "us-weather-tracker",
     "version": "0.1.0",
     "type": "module",
-    "description": "Get forecast, current conditions, and active alerts for US locations from the official National Weather Service API.",
+    "description": "Forecast and active alerts for US locations from the official National Weather Service API, optionally with GPS and HF radio conditions from NOAA space weather.",
     "engines": {
         "node": ">=18.0.0"
     },
@@ -10,6 +10,7 @@
         "apify": "^3.2.6"
     },
     "scripts": {
-        "start": "node src/main.js"
+        "start": "node src/main.js",
+        "test": "node --test"
     }
 }

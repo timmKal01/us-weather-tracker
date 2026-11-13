@@ -58,6 +58,81 @@
                     }
                 }
             }
+        },
+        "gps": {
+            "title": "Weather + GPS and radio conditions",
+            "transformation": {
+                "fields": [
+                    "label",
+                    "status",
+                    "city",
+                    "state",
+                    "activeAlerts",
+                    "forecastPeriods",
+                    "spaceWeather.kpIndex",
+                    "spaceWeather.radioBlackout",
+                    "spaceWeather.auroraVisibleLatitude",
+                    "spaceWeather.observedAt",
+                    "checkedAt",
+                    "error"
+                ],
+                "flatten": [
+                    "spaceWeather"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "label": {
+                        "label": "Location",
+                        "format": "text"
+                    },
+                    "status": {
+                        "label": "Status",
+                        "format": "text"
+                    },
+                    "city": {
+                        "label": "City",
+                        "format": "text"
+                    },
+                    "state": {
+                        "label": "State",
+                        "format": "text"
+                    },
+                    "activeAlerts": {
+                        "label": "Active alerts",
+                        "format": "array"
+                    },
+                    "forecastPeriods": {
+                        "label": "Forecast",
+                        "format": "array"
+                    },
+                    "spaceWeather.kpIndex": {
+                        "label": "Kp index (GPS)",
+                        "format": "number"
+                    },
+                    "spaceWeather.radioBlackout": {
+                        "label": "HF radio blackout",
+                        "format": "object"
+                    },
+                    "spaceWeather.auroraVisibleLatitude": {
+                        "label": "Aurora line (latitude)",
+                        "format": "number"
+                    },
+                    "spaceWeather.observedAt": {
+                        "label": "Space weather observed",
+                        "format": "text"
+                    },
+                    "checkedAt": {
+                        "label": "Checked at",
+                        "format": "date"
+                    },
+                    "error": {
+                        "label": "Error (not charged)",
+                        "format": "text"
+                    }
+                }
+            }
         }
     }
 }

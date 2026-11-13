@@ -30,7 +30,11 @@
             "editor": "json",
             "description": "For checking several locations in one run instead of one at a time. List of { \"label\": \"optional name\", \"latitude\": 30.2672, \"longitude\": -97.7431 }. US locations only. Ignored if Latitude above is filled in.",
             "prefill": [
-                { "label": "Austin, TX", "latitude": 30.2672, "longitude": -97.7431 }
+                {
+                    "label": "Austin, TX",
+                    "latitude": 30.2672,
+                    "longitude": -97.7431
+                }
             ]
         },
         "forecastPeriods": {
@@ -41,6 +45,12 @@
             "default": 4,
             "minimum": 1,
             "maximum": 14
+        },
+        "includeSpaceWeather": {
+            "title": "Add GPS and radio conditions",
+            "type": "boolean",
+            "description": "Also add current space weather to every row: the Kp index (geomagnetic storms that degrade GPS accuracy), the HF radio blackout level and the aurora line. For survey, drone, agriculture, utility and field crews. Fetched once per run from NOAA's Space Weather Prediction Center, at no extra cost.",
+            "default": false
         }
     }
 }

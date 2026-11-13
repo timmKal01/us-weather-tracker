@@ -1,10 +1,11 @@
 import { Actor, log } from 'apify';
 import { getLocationWeather } from './nws.js';
+import { getCurrentSpaceWeather } from './spaceweather.js';
 
 await Actor.init();
 
 const input = (await Actor.getInput()) ?? {};
-const { latitude: singleLat, longitude: singleLng, label: singleLabel, locations: locationsInput, forecastPeriods = 4 } = input;
+const { latitude: singleLat, longitude: singleLng, label: singleLabel, locations: locationsInput, forecastPeriods = 4, includeSpaceWeather = false } = input;
 
 const given = (value) => value !== undefined && value !== null && value !== '';
 
@@ -29,6 +30,17 @@ const LOCATION_CHECKED_EVENT = 'location-checked';
 function toCoordinate(value, max) {
     const n = typeof value === 'string' && value.trim() !== '' ? Number(value.trim()) : value;
     return typeof n === 'number' && Number.isFinite(n) && Math.abs(n) <= max ? n : null;
+}
+
+// GPS and HF radio conditions (merged in from field-operations-risk-briefing): one snapshot for the whole run,
+// since space weather is the same everywhere. Off by default, so plain weather rows stay as they were.
+let spaceWeather = null;
+if (includeSpaceWeather) {
+    try {
+        spaceWeather = await getCurrentSpaceWeather();
+    } catch (err) {
+        log.warning("NOAA's space weather service didn't answer; rows get spaceWeather: null", { error: err.message });
+    }
 }
 
 // Every location gets a row. A location that can't be checked used to be skipped with only a log
@@ -69,12 +81,13 @@ for (const location of locations) {
         longitude,
         status: 'ok',
         ...weather,
+        ...(includeSpaceWeather ? { spaceWeather } : {}),
         checkedAt,
     });
     await Actor.charge({ eventName: LOCATION_CHECKED_EVENT });
     checked++;
 
-    log.info('Fetched weather', { label: label ?? `${latitude},${longitude}`, activeAlerts: weather.activeAlerts.length });
+    log.info('Fetched weather', { label: label ?? `${latitude},${longitude}`, activeAlerts: weather.activeAlerts.length, ...(spaceWeather ? { kpIndex: spaceWeather.kpIndex, rScale: spaceWeather.radioBlackout.rScale } : {}) });
 }
 
 if (checked === 0 && serviceErrors > 0) {

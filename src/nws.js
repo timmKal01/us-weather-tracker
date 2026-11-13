@@ -1,5 +1,5 @@
 // NWS explicitly requires a descriptive User-Agent identifying the calling application.
-const USER_AGENT = '(us-weather-tracker Apify actor, weather-tracker-admin@example.com)';
+const USER_AGENT = 'us-weather-tracker/0.1 (+https://apify.com/m_ctim/us-weather-tracker)';
 
 const TRANSIENT_STATUSES = new Set([429, 500, 502, 503, 504]);
 const MAX_ATTEMPTS = 4;
